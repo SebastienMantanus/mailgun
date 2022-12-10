@@ -17,9 +17,7 @@ const client = mailgun.client({
 });
 
 // route génarale
-app.post("/", async (req, res) => {
-  console.log("coucou ! on se refait la main...");
-
+app.post("/post", async (req, res) => {
   const messageData = {
     from: `${req.body.firstname} ${req.body.lastname} <${req.body.email}>`,
     to: "sebastien@mantanus.me",
